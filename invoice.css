@@ -1,7 +1,3 @@
-h4 {
-    color: #1E3A8A; /* Deep blue */
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +14,7 @@ body {
 .invoice-container {
     background-color: white;
     padding: 20px;
-    max-width: 900px; /* Increased max-width for more spacing */
+    max-width: 1200px; /* Increased max-width for a wider layout */
     margin: 0 auto;
     border-radius: 8px;
     border: 1px solid #E5E7EB; /* Light gray border */
@@ -42,7 +38,7 @@ body {
     font-size: 24px;
     color: #1E3A8A; /* Deep blue */
     font-weight: bold;
-    margin-right: auto; /* This pushes the logo to the right */
+    margin-right: 15px; /* Space between the company name and logo */
 }
 
 .logo img {
@@ -81,6 +77,10 @@ body {
     color: #1E3A8A; /* Deep blue */
 }
 
+h4{
+    color: #1E3A8A; /* Deep blue */
+
+}
 .invoice-info p {
     font-size: 14px;
     color: #374151; /* Dark gray */
@@ -195,4 +195,187 @@ body {
     .invoice-container {
         padding: 15px;
     }
+}
+.invoice-header {
+    display: flex;
+    justify-content: space-between; /* Space between the company name and logo */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 20px;
+}
+
+.header-content {
+    display: flex;
+    width: 100%; /* Full width to ensure proper spacing */
+}
+
+.company-name {
+    font-size: 24px;
+    color: #1E3A8A; /* Deep blue */
+    font-weight: bold;
+    margin-right: auto; /* This pushes the logo to the right */
+}
+
+.logo img {
+    width: 150px; /* Adjust the size of the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+/* Invoice Details Table */
+.invoice-details table,
+.payment-terms-table table,
+.invoice-summary table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0; /* Space above and below the table */
+    font-size: 14px;
+    border-radius: 8px; /* Rounded corners for the table */
+    overflow: hidden; /* Prevents corners from being cut off */
+}
+
+.invoice-details th, .invoice-details td,
+.payment-terms-table td,
+.invoice-summary td {
+    padding: 10px; /* Consistent padding for table cells */
+    border: 1px solid #E5E7EB; /* Light gray table borders */
+    text-align: left;
+}
+
+.invoice-details th {
+    background-color: #F3F4F6; /* Light gray for header background */
+    color: #1E3A8A; /* Deep blue text */
+}
+
+.invoice-details tr:nth-child(even),
+.payment-terms-table tr:nth-child(even) {
+    background-color: #F9FAFB; /* Light gray for alternate rows */
+}
+
+/* Additional styles for the invoice summary */
+.invoice-summary td {
+    border: none; /* No border for regular rows in summary */
+}
+
+.invoice-summary .total-row td {
+    border-top: 2px solid #1E3A8A; /* Deep blue border for the total row */
+}
+
+/* Adjust for mobile responsiveness */
+@media (max-width: 600px) {
+    table {
+        font-size: 12px; /* Smaller font for mobile */
+    }
+}
+/* Invoice Details Table */
+.invoice-details table,
+.payment-terms-table table,
+.invoice-summary table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0; /* Space above and below the table */
+    font-size: 14px;
+    border-radius: 8px; /* Rounded corners for the table */
+    overflow: hidden; /* Prevents corners from being cut off */
+}
+
+.invoice-details th, .invoice-details td,
+.payment-terms-table td,
+.invoice-summary td {
+    padding: 10px; /* Consistent padding for table cells */
+    border: 1px solid #C0E6D9; /* Light green table borders */
+    text-align: left;
+}
+
+.invoice-details th {
+    background-color: #A8E6CF; /* Light green for header background */
+    color: #2C5F2D; /* Dark green text */
+}
+
+.invoice-details tr:nth-child(even),
+.payment-terms-table tr:nth-child(even) {
+    background-color: #D5E8D4; /* Lighter green for alternate rows */
+}
+
+/* Additional styles for the invoice summary */
+.invoice-summary td {
+    border: none; /* No border for regular rows in summary */
+}
+
+.invoice-summary .total-row td {
+    border-top: 2px solid #2C5F2D; /* Dark green border for the total row */
+}
+
+/* Adjust for mobile responsiveness */
+@media (max-width: 600px) {
+    table {
+        font-size: 12px; /* Smaller font for mobile */
+    }
+}
+.payment-terms-container {
+    display: flex; /* Enable flexbox for alignment */
+    justify-content: flex-end; /* Align the table to the right */
+    margin-top: 20px; /* Space above the payment terms */
+}
+
+.payment-terms-card {
+    background-color: #E8F5E9; /* Light green background for the card */
+    border-radius: 8px; /* Rounded corners for the card */
+    padding: 15px; /* Padding inside the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.payment-terms-table {
+    width: auto; /* Allow the table to take only the space it needs */
+    border-collapse: collapse; /* Collapse borders */
+    font-size: 14px; /* Ensure font size matches the rest */
+}
+
+.payment-terms-table td {
+    padding: 10px; /* Space around table cells */
+    border: none; /* No border for regular rows */
+    text-align: left; /* Align text to the left */
+}
+
+.payment-terms-table strong {
+    color: #2C5F2D; /* Dark green for strong text */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+.payment-terms-table tr {
+    border-bottom: 1px solid #C8E6C9; /* Light green border for rows */
+}
+
+.payment-terms-table tr:last-child {
+    border-bottom: none; /* No border for the last row */
+}
+.invoice-summary-container {
+    display: flex; /* Enable flexbox for alignment */
+    justify-content: flex-end; /* Align the summary card to the right */
+    margin-top: 20px; /* Space above the summary */
+}
+
+.invoice-summary-card {
+    background-color: #E8F5E9; /* Light green background for the card */
+    border-radius: 8px; /* Rounded corners for the card */
+    padding: 15px; /* Padding inside the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 200px; /* Fixed width for the summary card */
+}
+
+.invoice-summary {
+    width: 100%; /* Full width for the table within the card */
+    border-collapse: collapse; /* Collapse borders */
+    font-size: 14px; /* Font size for summary */
+}
+
+.invoice-summary td {
+    padding: 8px; /* Space around table cells */
+    border: none; /* No border for regular rows */
+    text-align: left; /* Align text to the left */
+}
+
+.invoice-summary .total-row td {
+    border-top: 2px solid #2C5F2D; /* Dark green border for the total row */
+}
+
+.invoice-summary td:last-child {
+    text-align: right; /* Align totals to the right for better readability */
 }
