@@ -48,7 +48,7 @@ body {
 
 .invoice-header p {
     font-size: 12px;
-    color: #374151; /* Dark gray for contact details */
+    color: #1E3A8A; /* Dark gray for contact details */
 }
 
 .invoice-info {
@@ -118,7 +118,7 @@ h4{
 }
 
 .payment-terms-table td {
-    background-color: #F9FAFB;
+    background-color: #ffffff;
     color: #374151; /* Dark gray text */
 }
 
@@ -246,7 +246,7 @@ h4{
 
 .invoice-details tr:nth-child(even),
 .payment-terms-table tr:nth-child(even) {
-    background-color: #F9FAFB; /* Light gray for alternate rows */
+    background-color: #ffffff; /* Light gray for alternate rows */
 }
 
 /* Additional styles for the invoice summary */
@@ -272,7 +272,7 @@ h4{
     border-collapse: collapse;
     margin: 20px 0; /* Space above and below the table */
     font-size: 14px;
-    border-radius: 8px; /* Rounded corners for the table */
+    border-radius: 20px; /* Rounded corners for the table */
     overflow: hidden; /* Prevents corners from being cut off */
 }
 
@@ -280,7 +280,7 @@ h4{
 .payment-terms-table td,
 .invoice-summary td {
     padding: 10px; /* Consistent padding for table cells */
-    border: 1px solid #C0E6D9; /* Light green table borders */
+    border: 1px solid #d7d7d7; /* Light green table borders */
     text-align: left;
 }
 
@@ -312,14 +312,14 @@ h4{
 .payment-terms-container {
     display: flex; /* Enable flexbox for alignment */
     justify-content: flex-end; /* Align the table to the right */
-    margin-top: 20px; /* Space above the payment terms */
+    /* margin-top: 20px; Space above the payment terms */
 }
 
 .payment-terms-card {
-    background-color: #E8F5E9; /* Light green background for the card */
+    background-color: #ffffff; /* Light green background for the card */
     border-radius: 8px; /* Rounded corners for the card */
-    padding: 15px; /* Padding inside the card */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 10px; /* Padding inside the card */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); Subtle shadow for depth */
 }
 
 .payment-terms-table {
@@ -340,7 +340,7 @@ h4{
 }
 
 .payment-terms-table tr {
-    border-bottom: 1px solid #C8E6C9; /* Light green border for rows */
+    border-bottom: 1px solid #000000; /* Light green border for rows */
 }
 
 .payment-terms-table tr:last-child {
@@ -353,10 +353,10 @@ h4{
 }
 
 .invoice-summary-card {
-    background-color: #E8F5E9; /* Light green background for the card */
+    background-color: #ffffff; /* Light green background for the card */
     border-radius: 8px; /* Rounded corners for the card */
     padding: 15px; /* Padding inside the card */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); Subtle shadow for depth */
     width: 200px; /* Fixed width for the summary card */
 }
 
