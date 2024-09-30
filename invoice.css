@@ -16,7 +16,7 @@ body {
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
-    border: 1px solid #000;
+    border: 1px solid #ccc; /* Light gray border */
 }
 
 .invoice-header {
@@ -26,30 +26,41 @@ body {
 
 .invoice-header h1 {
     font-size: 24px;
-    text-transform: uppercase;
+    color: #333; /* Dark gray text */
     margin-bottom: 5px;
 }
 
 .invoice-header p {
     font-size: 12px;
+    color: #666; /* Medium gray for contact details */
 }
 
 .invoice-info {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
 .invoice-info div {
     width: 48%;
+    margin-bottom: 10px;
 }
 
-.invoice-info p, .hospital-info p {
+.invoice-info p {
     font-size: 14px;
+    color: #333; /* Dark gray */
+}
+
+.hospital-info h2 {
+    font-size: 16px;
+    color: #333; /* Dark gray */
+    margin-bottom: 5px;
 }
 
 .payment-terms, .hospital-info {
     font-size: 14px;
+    color: #333; /* Dark gray */
     margin-bottom: 20px;
 }
 
@@ -62,25 +73,70 @@ table {
 
 table th, table td {
     padding: 10px;
-    border: 1px solid #000;
+    border: 1px solid #ccc; /* Light gray table borders */
     text-align: left;
 }
 
 table th {
-    background-color: #f0f0f0;
+    background-color: #f5f5f5; /* Light gray for header background */
+    color: #333; /* Dark gray text */
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Slightly lighter gray for alternate rows */
 }
 
 .invoice-summary p {
     font-size: 16px;
+    color: #333; /* Dark gray for totals */
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .invoice-footer {
     text-align: center;
     font-size: 14px;
+    color: #666; /* Medium gray */
     margin-top: 20px;
 }
 
 .invoice-footer strong {
+    color: #333; /* Dark gray */
     text-transform: uppercase;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 600px) {
+    .invoice-info {
+        flex-direction: column;
+    }
+    
+    .invoice-info div {
+        width: 100%;
+    }
+
+    table th, table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .invoice-header h1 {
+        font-size: 20px;
+    }
+
+    .invoice-header p {
+        font-size: 10px;
+    }
+
+    .invoice-summary p {
+        font-size: 14px;
+    }
+
+    body {
+        padding: 10px;
+    }
+
+    .invoice-container {
+        padding: 15px;
+    }
 }
