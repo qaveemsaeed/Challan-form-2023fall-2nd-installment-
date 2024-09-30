@@ -1,3 +1,7 @@
+h4 {
+    color: #1E3A8A; /* Deep blue */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,100 +12,152 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #F9FAFB; /* Light gray background */
 }
 
 .invoice-container {
     background-color: white;
     padding: 20px;
-    max-width: 800px;
+    max-width: 900px; /* Increased max-width for more spacing */
     margin: 0 auto;
-    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 8px;
+    border: 1px solid #E5E7EB; /* Light gray border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 .invoice-header {
-    text-align: center;
+    display: flex;
+    justify-content: space-between; /* Space between the company name and logo */
+    align-items: center; /* Center items vertically */
     margin-bottom: 20px;
 }
 
-.invoice-header h1 {
+.header-content {
+    display: flex;
+    align-items: center; /* Center the content vertically */
+    width: 100%;
+}
+
+.company-name {
     font-size: 24px;
-    color: #333; /* Dark gray text */
-    margin-bottom: 5px;
+    color: #1E3A8A; /* Deep blue */
+    font-weight: bold;
+    margin-right: auto; /* This pushes the logo to the right */
+}
+
+.logo img {
+    width: 150px; /* Adjust the size of the logo */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .invoice-header p {
     font-size: 12px;
-    color: #666; /* Medium gray for contact details */
+    color: #374151; /* Dark gray for contact details */
 }
 
 .invoice-info {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start; /* Align the divs to the top */
+    width: 100%;
     margin-bottom: 20px;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
 .invoice-info div {
-    width: 48%;
-    margin-bottom: 10px;
+    flex: 1; /* Make both divs grow to fill the space */
+}
+
+.invoice-info div:first-child {
+    max-width: 60%; /* Company info takes up to 60% of the width */
+}
+
+.invoice-info div:last-child {
+    max-width: 40%; /* Invoice details take up to 40% of the width */
+    text-align: right; /* Align text to the right */
+}
+
+.invoice-info h1 {
+    font-size: 24px;
+    color: #1E3A8A; /* Deep blue */
 }
 
 .invoice-info p {
     font-size: 14px;
-    color: #333; /* Dark gray */
+    color: #374151; /* Dark gray */
 }
 
-.hospital-info h2 {
-    font-size: 16px;
-    color: #333; /* Dark gray */
-    margin-bottom: 5px;
-}
-
-.payment-terms, .hospital-info {
-    font-size: 14px;
-    color: #333; /* Dark gray */
-    margin-bottom: 20px;
-}
-
-table {
+/* Invoice Details Table */
+.invoice-details table,
+.payment-terms-table table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
+    margin: 20px 0; /* Space above and below the table */
     font-size: 14px;
 }
 
-table th, table td {
-    padding: 10px;
-    border: 1px solid #ccc; /* Light gray table borders */
+.invoice-details th, .invoice-details td,
+.payment-terms-table td {
+    padding: 10px; /* Consistent padding for table cells */
+    border: 1px solid #E5E7EB; /* Light gray table borders */
     text-align: left;
 }
 
-table th {
-    background-color: #f5f5f5; /* Light gray for header background */
-    color: #333; /* Dark gray text */
+.invoice-details th {
+    background-color: #F3F4F6; /* Light gray for header background */
+    color: #1E3A8A; /* Deep blue text */
 }
 
-table tr:nth-child(even) {
-    background-color: #f9f9f9; /* Slightly lighter gray for alternate rows */
+.invoice-details tr:nth-child(even),
+.payment-terms-table tr:nth-child(even) {
+    background-color: #F9FAFB; /* Light gray for alternate rows */
 }
 
-.invoice-summary p {
-    font-size: 16px;
-    color: #333; /* Dark gray for totals */
-    margin-bottom: 5px;
-    font-weight: bold;
+/* Payment Terms Table */
+.payment-terms-table {
+    margin-top: 20px;
 }
 
+.payment-terms-table td {
+    background-color: #F9FAFB;
+    color: #374151; /* Dark gray text */
+}
+
+/* Invoice Summary */
+.invoice-summary table {
+    width: 100%;
+    border-collapse: collapse; /* Collapse borders */
+    margin-top: 20px; /* Increased space above the table */
+    font-size: 14px; /* Ensure font size matches the rest */
+}
+
+.invoice-summary td {
+    padding: 10px; /* Space around table cells */
+    border: none; /* No border for regular rows */
+    text-align: left; /* Align text to the left */
+}
+
+.invoice-summary .total-row td {
+    border-top: 2px solid #1E3A8A; /* Deep blue border for the total row */
+}
+
+.invoice-summary strong {
+    color: #374151; /* Dark gray for strong text */
+}
+
+.invoice-summary td:last-child {
+    text-align: right; /* Align totals to the right for better readability */
+}
+
+/* Invoice Footer */
 .invoice-footer {
     text-align: center;
     font-size: 14px;
-    color: #666; /* Medium gray */
+    color: #374151; /* Dark gray */
     margin-top: 20px;
 }
 
 .invoice-footer strong {
-    color: #333; /* Dark gray */
+    color: #1E3A8A; /* Deep blue */
     text-transform: uppercase;
 }
 
