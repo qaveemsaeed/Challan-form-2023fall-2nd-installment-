@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invoice</title>
     <link rel="stylesheet" href="invoice.css">
 </head>
+
 <body>
     <div class="invoice-container">
         <header class="invoice-header">
-            <h1>Procare Patient Transfer Inc.</h1>
-            <p>366 Main Street, Toronto ON, M4C 4X8</p>
-            <p>Contact Number: 647-224-8045</p>
-            <p>Email: Info@procaretrans.ca</p>
-        </header>
-
+            <div class="header-content">
+                <div class="company-name">
+                    Procare Patient Transfer Inc.
+                </div>
+                <div class="logo">
+                    <img src="https://picsum.photos/200/200" alt="Company Logo" />
+                </div>
+            </div>
+        </header>        
+        
         <section class="invoice-info">
+            <div>
+                <h4>Procare Patient Transfer Inc.</h4>
+                <p>366 Main Street, Toronto ON, M4C 4X8</p>
+                <p>Contact Number: 647-224-8045</p>
+                <p>Email: Info@procaretrans.ca</p>
+            </div>
             <div>
                 <p><strong>Invoice No:</strong> H-000127</p>
                 <p><strong>Service Date:</strong> 02-Aug-24</p>
                 <p><strong>Invoice Date:</strong> 02-Sep-24</p>
             </div>
-            <div>
-                <h2>Scarborough Health Network - Birchmount Hospital</h2>
-                <p>3030 Birchmount Rd, Scarborough, ON M1W 3W3</p>
-                <p><strong>Department:</strong> 4A Medicine</p>
-                <p><strong>Cost Centre:</strong> A21000001C</p>
-            </div>
         </section>
-
-        <section class="payment-terms">
-            <p><strong>Payment Terms:</strong> Due in 30 days upon receipt</p>
-            <p><strong>Due Date:</strong> 01-Oct-2024</p>
-        </section>
-
+        
+        <div>
+            <h4>Scarborough Health Network - Birchmount Hospital</h4>
+            <p>3030 Birchmount Rd, Scarborough, ON M1W 3W3</p>
+            <p><strong>Department:</strong> 4A Medicine</p>
+            <p><strong>Cost Centre:</strong> A21000001C</p>
+        </div>
+        
         <section class="invoice-details">
             <table>
                 <thead>
@@ -64,12 +72,37 @@
                 </tbody>
             </table>
         </section>
+        
+        <!-- Payment Terms Table -->
+        <section class="payment-terms-table">
+            <table>
+                <tr>
+                    <td><strong>Payment Terms:</strong> Due in 30 days upon receipt</td>
+                    <td><strong>Due Date:</strong> 01-Oct-2024</td>
+                </tr>
+            </table>
+        </section>
+        
 
         <section class="invoice-summary">
-            <p><strong>Subtotal:</strong> $269.98</p>
-            <p><strong>Sales Tax @ 13.00%:</strong> $35.10</p>
-            <p><strong>Total:</strong> $305.08</p>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><strong>Subtotal:</strong></td>
+                        <td>$269.98</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sales Tax @ 13.00%:</strong></td>
+                        <td>$35.10</td>
+                    </tr>
+                    <tr class="total-row">
+                        <td><strong>Total:</strong></td>
+                        <td><strong>$305.08</strong></td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
+        
 
         <footer class="invoice-footer">
             <p>THANK YOU FOR YOUR BUSINESS!</p>
@@ -78,4 +111,5 @@
         </footer>
     </div>
 </body>
+
 </html>
